@@ -13,12 +13,12 @@
                 dataType: "json",
                 contentType: "application/json"
             })
-            .success(function () {
+            .done(function () {
                 toastr.success( "You have successfully created a new contact!", "Success!" );
                 self.contacts.push( data );
                 window.location.href = "#/";
             })
-            .error(function () {
+            .fail(function () {
                 toastr.error( "There was an error creating your new contact", "<sad face>" );
             });
         };
